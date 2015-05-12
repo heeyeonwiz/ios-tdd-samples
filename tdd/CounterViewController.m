@@ -17,4 +17,7 @@
     ++_count;
     self.counterLabel.text = [NSString stringWithFormat:@"%d", _count];
 }
+
+- (IBAction)minusCounter:(id)sender {
+}
 @end

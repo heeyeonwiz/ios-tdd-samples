@@ -59,6 +59,11 @@
     HC_assertThat(_sut.minusButton, HC_is(HC_notNilValue()));
 }
 
+- (void)test_minus_button_action {
+    HC_assertThat([_sut.minusButton actionsForTarget:_sut forControlEvent:UIControlEventTouchUpInside],
+            HC_contains(@"minusCounter:", nil));
+}
+
 
 - (CounterViewController *)findController:(NSString *)controllerId {
     return [self findController:controllerId inStoryboard:@"Main"];
