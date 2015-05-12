@@ -28,20 +28,25 @@
 }
 
 - (void)test_next_reminder_with_no_current_reminder_id_in_user_default_should_return_zero {
-    [MKTGiven([_mockUserDefault objectForKey:@"currentReminderId"]) willReturn:nil];
+    [self setUpReminderId:nil];
     //then
     HC_assertThat([_sut nextReminderId], HC_is(HC_equalTo(@0)));
 }
 
 - (void)test_next_reminder_with_current_reminder_id_in_user_default_should_one_greater {
-    [MKTGiven([_mockUserDefault objectForKey:@"currentReminderId"]) willReturn:@3];
+    NSNumber *reminderId = @3;
+    [self setUpReminderId:reminderId];
     //then
     HC_assertThat([_sut nextReminderId], HC_is(HC_equalTo(@4)));
 }
 
+- (void)setUpReminderId:(NSNumber *)reminderId {
+    [MKTGiven([_mockUserDefault objectForKey:@"currentReminderId"]) willReturn:reminderId];
+}
+
 
 - (void)test_next_reminder_with_no_current_reminder_id_in_user_default_should_save_zero_in_user_defaults {
-    [MKTGiven([_mockUserDefault objectForKey:@"currentReminderId"]) willReturn:nil];
+    [self setUpReminderId:nil];
     //when
     [_sut nextReminderId];
 
