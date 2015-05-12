@@ -39,7 +39,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="minusCounter:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yXB-h6-KRs"/>
+                                    <action selector="decrementCounter:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="EbL-N7-Se0"/>
                                 </connections>
                             </button>
                         </subviews>

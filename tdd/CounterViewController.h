@@ -6,5 +6,5 @@
 @property (weak, nonatomic) IBOutlet UIButton *minusButton;
 
 - (IBAction)incrementCounter:(id)sender;
-- (IBAction)minusCounter:(id)sender;
+- (IBAction)decrementCounter:(id)sender;
 @end
