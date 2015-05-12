@@ -64,6 +64,17 @@
             HC_contains(@"decrementCounter:", nil));
 }
 
+- (void)test_minus_counter_once_should_decrement_one_to_counter_label {
+    [_sut decrementCounter:nil];
+    HC_assertThat(_sut.counterLabel.text, HC_is(@"-1"));
+}
+
+- (void)test_minus_counter_twice_should_decrement_two_to_counter_label {
+    [_sut decrementCounter:nil];
+    [_sut decrementCounter:nil];
+    HC_assertThat(_sut.counterLabel.text, HC_is(@"-2"));
+}
+
 - (CounterViewController *)findController:(NSString *)controllerId {
     return [self findController:controllerId inStoryboard:@"Main"];
 }
