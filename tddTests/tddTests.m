@@ -11,38 +11,34 @@
 
 @end
 
-@implementation tddTests
+@implementation tddTests {
+    NSUserDefaults *_mockUserDefault;
+    Example *_sut;
+}
 
 - (void)setUp {
     [super setUp];
+    _mockUserDefault = MKTMock([NSUserDefaults class]);
+    _sut = [[Example alloc] initWithUserDefaults:_mockUserDefault];
+    [MKTGiven([_mockUserDefault objectForKey:@"currentReminderId"]) willReturn:nil];
 }
 
 - (void)tearDown {
+    _sut = nil;
     [super tearDown];
 }
 
 - (void)test_next_reminder_with_no_current_reminder_id_in_user_default_should_return_zero {
-    //given
-    NSUserDefaults *mockUserDefault = MKTMock([NSUserDefaults class]);
-    Example *sut = [[Example alloc] initWithUserDefaults: mockUserDefault];
-
-    [MKTGiven([mockUserDefault objectForKey:@"currentReminderId"]) willReturn:nil];
     //then
-    HC_assertThat([sut nextReminderId], HC_is(HC_equalTo(@0)));
+    HC_assertThat([_sut nextReminderId], HC_is(HC_equalTo(@0)));
 }
 
 - (void)test_next_reminder_with_no_current_reminder_id_in_user_default_should_save_zero_in_user_defaults {
-    //given
-    NSUserDefaults *mockUserDefault = MKTMock([NSUserDefaults class]);
-    Example *sut = [[Example alloc] initWithUserDefaults: mockUserDefault];
-
-    [MKTGiven([mockUserDefault objectForKey:@"currentReminderId"]) willReturn:nil];
-
     //when
-    [sut nextReminderId];
+    [_sut nextReminderId];
 
     //then
-    [MKTVerify(mockUserDefault) setObject:@0 forKey:@"currentReminderId"];
+    [MKTVerify(_mockUserDefault) setObject:@0 forKey:@"currentReminderId"];
 }
 
 
