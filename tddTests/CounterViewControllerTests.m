@@ -31,6 +31,10 @@
     HC_assertThat(_sut.counterLabel, HC_is(HC_notNilValue()));
 }
 
+- (void)test_counter_label_default_text_should_be_zero {
+    HC_assertThat(_sut.counterLabel.text, HC_is(@"0"));
+}
+
 - (CounterViewController *)findController:(NSString *)controllerId {
     return [self findController:controllerId inStoryboard:@"Main"];
 }
