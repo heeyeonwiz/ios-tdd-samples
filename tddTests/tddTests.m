@@ -49,5 +49,12 @@
     [MKTVerify(_mockUserDefault) setObject:@0 forKey:@"currentReminderId"];
 }
 
+- (void)test_next_reminder_with_current_reminder_id_in_user_default_should_save_greater_in_user_defaults {
+    [self setUpReminderId:@3];
+    [_sut nextReminderId];
+    [MKTVerify(_mockUserDefault) setObject:@4 forKey:@"currentReminderId"];
+}
+
+
 
 @end
