@@ -2,7 +2,7 @@
 
 
 @implementation CounterViewController {
-
+    int _count;
 }
 
 - (void)viewDidLoad {
@@ -14,7 +14,7 @@
 }
 
 - (IBAction)incrementCounter:(id)sender {
-    int count = [self.counterLabel.text integerValue];
-    self.counterLabel.text = [NSString stringWithFormat:@"%d", ++count];
+    ++_count;
+    self.counterLabel.text = [NSString stringWithFormat:@"%d", _count];
 }
 @end
