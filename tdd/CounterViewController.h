@@ -7,4 +7,6 @@
 
 - (IBAction)incrementCounter:(id)sender;
 - (IBAction)decrementCounter:(id)sender;
+
+- (void)updateCounterLabel:(int)count;
 @end

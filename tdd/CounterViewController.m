@@ -15,19 +15,19 @@
 
 - (IBAction)incrementCounter:(id)sender {
     ++_count;
-    [self updateCounterLabel];
+    [self updateCounterLabel: _count];
 }
 
 - (IBAction)decrementCounter:(id)sender {
     --_count;
-    [self updateCounterLabel];
+    [self updateCounterLabel: _count];
 }
 
-- (void)updateCounterLabel {
-    UIColor *color = _count == 0 ? [UIColor blackColor] :
-            _count > 0 ? [UIColor greenColor] : [UIColor redColor];
+- (void)updateCounterLabel: (int) count {
+    UIColor *color = count == 0 ? [UIColor blackColor] :
+            count > 0 ? [UIColor greenColor] : [UIColor redColor];
 
-    self.counterLabel.text = [NSString stringWithFormat:@"%d", _count];
+    self.counterLabel.text = [NSString stringWithFormat:@"%d", count];
     self.counterLabel.textColor = color;
 }
 @end

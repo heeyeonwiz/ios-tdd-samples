@@ -36,20 +36,17 @@
 }
 
 - (void)test_counter_label_with_zero_should_be_black {
-    [_sut incrementCounter:nil];
-    [_sut decrementCounter:nil];
+    [_sut updateCounterLabel: 0];
     HC_assertThat(_sut.counterLabel.textColor, HC_is([UIColor blackColor]));
 }
 
 - (void)test_counter_label_with_positive_should_be_green {
-    [_sut incrementCounter:nil];
-    [_sut incrementCounter:nil];
+    [_sut updateCounterLabel: 1];
     HC_assertThat(_sut.counterLabel.textColor, HC_is([UIColor greenColor]));
 }
 
 - (void)test_counter_label_with_negative_should_be_red {
-    [_sut decrementCounter:nil];
-    [_sut decrementCounter:nil];
+    [_sut updateCounterLabel: -1];
     HC_assertThat(_sut.counterLabel.textColor, HC_is([UIColor redColor]));
 }
 
