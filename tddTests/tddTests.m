@@ -1,13 +1,11 @@
-//
-//  tddTests.m
-//  tddTests
-//
-//  Created by Jian Lv on 5/12/15.
-//  Copyright (c) 2015 Jian Lv. All rights reserved.
-//
-
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "Example.h"
+
+#define HC_SHORTHAND
+#import <OCHamcrest/OCHamcrest.h>
+#define MOCKITO_SHORTHAND
+#import <OCMockito/OCMockito.h>
 
 @interface tddTests : XCTestCase
 
@@ -17,24 +15,20 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
-}
+- (void)test_next_reminder_with_no_current_reminder_id_in_user_default_should_return_zero {
+    //given
+    NSUserDefaults *mockUserDefault = MKTMock([NSUserDefaults class]);
+    Example *sut = [[Example alloc] initWithUserDefaults: mockUserDefault];
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+    [MKTGiven([mockUserDefault objectForKey:@"currentReminderId"]) willReturn:nil];
+    //then
+    HC_assertThat([sut nextReminderId], HC_is(HC_equalTo(@0)));
 }
 
 @end
