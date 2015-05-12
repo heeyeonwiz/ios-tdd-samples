@@ -13,10 +13,14 @@
 
 @end
 
-@implementation CounterViewControllerTests
+@implementation CounterViewControllerTests {
+    CounterViewController *_sut;
+}
 
 - (void)setUp {
     [super setUp];
+    _sut = [self findController:@"counterViewController"];
+    [_sut view];
 }
 
 - (void)tearDown {
@@ -24,10 +28,7 @@
 }
 
 - (void)test_counter_label_should_be_connected {
-    CounterViewController *sut = [self findController:@"counterViewController"];
-    [sut view];
-
-    HC_assertThat(sut.counterLabel, HC_is(HC_notNilValue()));
+    HC_assertThat(_sut.counterLabel, HC_is(HC_notNilValue()));
 }
 
 - (CounterViewController *)findController:(NSString *)controllerId {
