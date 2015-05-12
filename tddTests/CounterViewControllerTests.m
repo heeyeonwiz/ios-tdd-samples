@@ -44,6 +44,17 @@
             HC_contains(@"incrementCounter:", nil));
 }
 
+- (void)test_increment_counter_once_should_add_one_to_counter_label {
+    [_sut incrementCounter:nil];
+    HC_assertThat(_sut.counterLabel.text, HC_is(@"1"));
+}
+
+- (void)test_increment_counter_twice_should_add_two_to_counter_label {
+    [_sut incrementCounter:nil];
+    [_sut incrementCounter:nil];
+    HC_assertThat(_sut.counterLabel.text, HC_is(@"2"));
+}
+
 - (CounterViewController *)findController:(NSString *)controllerId {
     return [self findController:controllerId inStoryboard:@"Main"];
 }
