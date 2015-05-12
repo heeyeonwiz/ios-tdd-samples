@@ -7,14 +7,18 @@
 
 
 @implementation Example {
-
+    NSUserDefaults *_userDefaults;
 }
 - (id)initWithUserDefaults:(NSUserDefaults *)defaults {
     self = [super init];
+    if (self) {
+        _userDefaults = defaults;
+    }
     return self;
 }
 
 - (NSNumber *)nextReminderId {
+    [_userDefaults setObject:@0 forKey:@"currentReminderId"];
     return @0;
 }
 
