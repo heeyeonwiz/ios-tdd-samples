@@ -35,6 +35,10 @@
     HC_assertThat(_sut.counterLabel.text, HC_is(@"0"));
 }
 
+- (void)test_plus_button_should_be_connected {
+    HC_assertThat(_sut.plusButton, HC_is(HC_notNilValue()));
+}
+
 - (CounterViewController *)findController:(NSString *)controllerId {
     return [self findController:controllerId inStoryboard:@"Main"];
 }

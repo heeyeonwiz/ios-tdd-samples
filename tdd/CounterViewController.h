@@ -2,5 +2,6 @@
 
 @interface CounterViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *counterLabel;
+@property (weak, nonatomic) IBOutlet UIButton *plusButton;
 
 @end
