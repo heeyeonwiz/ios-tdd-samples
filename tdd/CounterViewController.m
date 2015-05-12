@@ -24,6 +24,10 @@
 }
 
 - (void)updateCounterLabel {
+    UIColor *color = _count == 0 ? [UIColor blackColor] :
+            _count > 0 ? [UIColor greenColor] : [UIColor redColor];
+
     self.counterLabel.text = [NSString stringWithFormat:@"%d", _count];
+    self.counterLabel.textColor = color;
 }
 @end

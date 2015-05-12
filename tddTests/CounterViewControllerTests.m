@@ -35,6 +35,24 @@
     HC_assertThat(_sut.counterLabel.text, HC_is(@"0"));
 }
 
+- (void)test_counter_label_with_zero_should_be_black {
+    [_sut incrementCounter:nil];
+    [_sut decrementCounter:nil];
+    HC_assertThat(_sut.counterLabel.textColor, HC_is([UIColor blackColor]));
+}
+
+- (void)test_counter_label_with_positive_should_be_green {
+    [_sut incrementCounter:nil];
+    [_sut incrementCounter:nil];
+    HC_assertThat(_sut.counterLabel.textColor, HC_is([UIColor greenColor]));
+}
+
+- (void)test_counter_label_with_negative_should_be_red {
+    [_sut decrementCounter:nil];
+    [_sut decrementCounter:nil];
+    HC_assertThat(_sut.counterLabel.textColor, HC_is([UIColor redColor]));
+}
+
 - (void)test_plus_button_should_be_connected {
     HC_assertThat(_sut.plusButton, HC_is(HC_notNilValue()));
 }
