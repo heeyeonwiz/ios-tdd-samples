@@ -32,11 +32,19 @@
                                     <action selector="incrementCounter:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mfM-ai-cT9"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPa-bu-xqv">
+                                <rect key="frame" x="16" y="100" width="280" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <state key="normal" title="-">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="counterLabel" destination="NDp-HR-Wad" id="VXY-Op-6tc"/>
+                        <outlet property="minusButton" destination="tPa-bu-xqv" id="ZvP-3f-buI"/>
                         <outlet property="plusButton" destination="ETD-rI-qEi" id="J4k-Bl-FOv"/>
                     </connections>
                 </viewController>
