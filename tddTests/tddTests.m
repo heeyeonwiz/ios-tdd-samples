@@ -29,14 +29,12 @@
 
 - (void)test_next_reminder_with_no_current_reminder_id_in_user_default_should_return_zero {
     [self setUpReminderId:nil];
-    //then
     HC_assertThat([_sut nextReminderId], HC_is(HC_equalTo(@0)));
 }
 
 - (void)test_next_reminder_with_current_reminder_id_in_user_default_should_one_greater {
     NSNumber *reminderId = @3;
     [self setUpReminderId:reminderId];
-    //then
     HC_assertThat([_sut nextReminderId], HC_is(HC_equalTo(@4)));
 }
 
@@ -47,10 +45,7 @@
 
 - (void)test_next_reminder_with_no_current_reminder_id_in_user_default_should_save_zero_in_user_defaults {
     [self setUpReminderId:nil];
-    //when
     [_sut nextReminderId];
-
-    //then
     [MKTVerify(_mockUserDefault) setObject:@0 forKey:@"currentReminderId"];
 }
 
