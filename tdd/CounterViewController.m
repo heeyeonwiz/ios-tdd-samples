@@ -14,4 +14,6 @@
     [super didReceiveMemoryWarning];
 }
 
+- (IBAction)incrementCounter:(id)sender {
+}
 @end

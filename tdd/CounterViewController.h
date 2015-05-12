@@ -4,4 +4,5 @@
 @property (weak, nonatomic) IBOutlet UILabel *counterLabel;
 @property (weak, nonatomic) IBOutlet UIButton *plusButton;
 
+- (IBAction)incrementCounter:(id)sender;
 @end

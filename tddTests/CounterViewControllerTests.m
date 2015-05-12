@@ -39,6 +39,11 @@
     HC_assertThat(_sut.plusButton, HC_is(HC_notNilValue()));
 }
 
+- (void)test_plus_button_should_observe_action {
+    HC_assertThat([_sut.plusButton actionsForTarget:_sut forControlEvent:UIControlEventTouchUpInside],
+            HC_contains(@"incrementCounter:", nil));
+}
+
 - (CounterViewController *)findController:(NSString *)controllerId {
     return [self findController:controllerId inStoryboard:@"Main"];
 }
