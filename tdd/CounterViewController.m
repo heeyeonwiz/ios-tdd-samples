@@ -15,11 +15,15 @@
 
 - (IBAction)incrementCounter:(id)sender {
     ++_count;
-    self.counterLabel.text = [NSString stringWithFormat:@"%d", _count];
+    [self updateCounterLabel];
 }
 
 - (IBAction)decrementCounter:(id)sender {
     --_count;
+    [self updateCounterLabel];
+}
+
+- (void)updateCounterLabel {
     self.counterLabel.text = [NSString stringWithFormat:@"%d", _count];
 }
 @end
