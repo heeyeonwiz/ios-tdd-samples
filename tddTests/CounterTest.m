@@ -15,6 +15,7 @@
 @implementation CounterTest {
     Counter *_counter;
     int modelChangedCounter;
+    NSInteger modelChangedValue;
 }
 
 - (void)setUp {
@@ -28,9 +29,13 @@
 
 - (void)counterModelChanged:(NSNotification *) notification {
     ++modelChangedCounter;
+    Counter *counter = notification.object;
+    modelChangedValue = counter.count;
 }
 
 - (void)tearDown {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    _counter = nil;
     [super tearDown];
 }
 
@@ -52,5 +57,12 @@
     [_counter increment];
 
     HC_assertThatInteger(modelChangedCounter, HC_is(HC_equalTo(@1)));
+}
+
+- (void)test_increment_should_post_mode_changed_notification_with_new_count {
+    _counter.count = 1;
+    [_counter increment];
+
+    HC_assertThatInteger(modelChangedValue, HC_is(HC_equalTo(@2)));
 }
 @end

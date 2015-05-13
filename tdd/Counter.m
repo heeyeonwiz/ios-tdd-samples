@@ -6,8 +6,8 @@ NSString *const CounterModelChanged = @"CounterModelChanged";
 
 }
 - (void)increment {
+    _count += 1;
     [[NSNotificationCenter defaultCenter] postNotificationName:CounterModelChanged
                                                         object:self];
-    _count += 1;
 }
 @end
