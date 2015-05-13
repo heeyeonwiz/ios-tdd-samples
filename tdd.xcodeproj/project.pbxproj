@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19B742AD0AA8E4CB3554D949 /* Counter.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B7453323412782249DD9D8 /* Counter.m */; };
 		19B742F8C9C220884D7B4AC6 /* Example.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B7440CCA760F4B7758430D /* Example.m */; };
 		19B743CF339AE980A4FCC8E2 /* CounterViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B74BF5FEB786C2A7FC7B57 /* CounterViewControllerTests.m */; };
 		19B749A25B9E426358A23953 /* CounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B7428A04D1FE483F5BE8DF /* CounterViewController.m */; };
@@ -34,7 +35,9 @@
 		19B7428A04D1FE483F5BE8DF /* CounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterViewController.m; sourceTree = "<group>"; };
 		19B743609A48F3817A0E4867 /* CounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CounterViewController.h; sourceTree = "<group>"; };
 		19B7440CCA760F4B7758430D /* Example.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Example.m; sourceTree = "<group>"; };
+		19B7453323412782249DD9D8 /* Counter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Counter.m; sourceTree = "<group>"; };
 		19B74BF5FEB786C2A7FC7B57 /* CounterViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CounterViewControllerTests.m; sourceTree = "<group>"; };
+		19B74C23E690470DFE73DB9D /* Counter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Counter.h; sourceTree = "<group>"; };
 		19B74E7E1E89A9F1424E61A1 /* Example.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Example.h; sourceTree = "<group>"; };
 		3CD4AB0A1B01A57E00B20124 /* tdd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tdd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CD4AB0E1B01A57E00B20124 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 				19B7440CCA760F4B7758430D /* Example.m */,
 				19B7428A04D1FE483F5BE8DF /* CounterViewController.m */,
 				19B743609A48F3817A0E4867 /* CounterViewController.h */,
+				19B7453323412782249DD9D8 /* Counter.m */,
+				19B74C23E690470DFE73DB9D /* Counter.h */,
 			);
 			path = tdd;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 				3CD4AB101B01A57E00B20124 /* main.m in Sources */,
 				19B742F8C9C220884D7B4AC6 /* Example.m in Sources */,
 				19B749A25B9E426358A23953 /* CounterViewController.m in Sources */,
+				19B742AD0AA8E4CB3554D949 /* Counter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,4 +1,5 @@
 #import "CounterViewController.h"
+#import "Counter.h"
 
 
 @implementation CounterViewController {
@@ -14,6 +15,7 @@
 }
 
 - (IBAction)incrementCounter:(id)sender {
+    [_counter increment];
     ++_count;
     [self updateCounterLabel: _count];
 }

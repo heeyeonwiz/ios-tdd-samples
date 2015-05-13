@@ -6,7 +6,7 @@
 #define MOCKITO_SHORTHAND
 #import <OCMockito/OCMockito.h>
 #import "CounterViewController.h"
-
+#import "Counter.h"
 
 
 @interface CounterViewControllerTests : XCTestCase
@@ -15,16 +15,25 @@
 
 @implementation CounterViewControllerTests {
     CounterViewController *_sut;
+    Counter *_mockCounter;
 }
 
 - (void)setUp {
     [super setUp];
+    _mockCounter = MKTMock([Counter class]);
     _sut = [self findController:@"counterViewController"];
+    _sut.counter = _mockCounter;
     [_sut view];
 }
 
 - (void)tearDown {
     [super tearDown];
+}
+
+- (void)test_increment_should_ask_counter_to_increment {
+    [_sut incrementCounter:nil];
+
+    [MKTVerify(_mockCounter) increment];
 }
 
 - (void)test_counter_label_should_be_connected {
