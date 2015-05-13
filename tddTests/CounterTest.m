@@ -4,6 +4,7 @@
 #define HC_SHORTHAND
 #import <OCHamcrest/OCHamcrest.h>
 #define MOCKITO_SHORTHAND
+
 #import <OCMockito/OCMockito.h>
 #import "Counter.h"
 
@@ -13,11 +14,20 @@
 
 @implementation CounterTest {
     Counter *_counter;
+    int modelChangedCounter;
 }
 
 - (void)setUp {
     [super setUp];
     _counter = [[Counter alloc] init];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(counterModelChanged:)
+                                                 name:CounterModelChanged
+                                               object:_counter];
+}
+
+- (void)counterModelChanged:(NSNotification *) notification {
+    ++modelChangedCounter;
 }
 
 - (void)tearDown {
@@ -36,5 +46,11 @@
     [_counter increment];
 
     HC_assertThatInteger(_counter.count, HC_is(HC_equalTo(@3)));
+}
+
+- (void)test_increment_should_post_model_changed_notification {
+    [_counter increment];
+
+    HC_assertThatInteger(modelChangedCounter, HC_is(HC_equalTo(@1)));
 }
 @end
