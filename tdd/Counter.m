@@ -10,4 +10,8 @@ NSString *const CounterModelChanged = @"CounterModelChanged";
     [[NSNotificationCenter defaultCenter] postNotificationName:CounterModelChanged
                                                         object:self];
 }
+
+- (void)decrement {
+
+}
 @end

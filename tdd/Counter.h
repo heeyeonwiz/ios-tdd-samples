@@ -6,4 +6,6 @@ extern NSString *const CounterModelChanged;
 @property(nonatomic) NSInteger count;
 
 - (void)increment;
+
+- (void)decrement;
 @end

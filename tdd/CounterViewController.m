@@ -30,6 +30,7 @@
 }
 
 - (IBAction)decrementCounter:(id)sender {
+    [_counter decrement];
     --_count;
     [self updateCounterLabel: _count];
 }

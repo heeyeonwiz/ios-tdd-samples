@@ -42,6 +42,12 @@
     [MKTVerify(_mockCounter) increment];
 }
 
+- (void)test_decrement_should_ask_counter_to_decrement {
+    [_sut decrementCounter:nil];
+
+    [MKTVerify(_mockCounter) decrement];
+}
+
 - (void)test_model_changed_notification_should_update_counter_label {
     [MKTGiven([_mockCounter count]) willReturnInteger:2];
 
