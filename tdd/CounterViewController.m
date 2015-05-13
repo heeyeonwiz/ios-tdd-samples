@@ -2,9 +2,7 @@
 #import "Counter.h"
 
 
-@implementation CounterViewController {
-    int _count;
-}
+@implementation CounterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,14 +23,10 @@
 
 - (IBAction)incrementCounter:(id)sender {
     [_counter increment];
-    ++_count;
-    [self updateCounterLabel: _count];
 }
 
 - (IBAction)decrementCounter:(id)sender {
     [_counter decrement];
-    --_count;
-    [self updateCounterLabel: _count];
 }
 
 - (void)updateCounterLabel: (int) count {
