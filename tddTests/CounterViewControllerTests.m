@@ -36,6 +36,13 @@
     [MKTVerify(_mockCounter) increment];
 }
 
+- (void)test_model_changed_notification_should_update_counter_label {
+    [MKTGiven([_mockCounter count]) willReturnInteger:2];
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:CounterModelChanged object:_mockCounter];
+    HC_assertThat(_sut.counterLabel.text, HC_is(HC_equalTo(@"2")));
+}
+
 - (void)test_counter_label_should_be_connected {
     HC_assertThat(_sut.counterLabel, HC_is(HC_notNilValue()));
 }

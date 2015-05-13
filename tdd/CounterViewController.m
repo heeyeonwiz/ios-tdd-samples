@@ -8,7 +8,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(modelChanged:) name:CounterModelChanged object:nil];
 }
+
+- (void)modelChanged:(NSNotification *)notification {
+    [self updateCounterLabel: _counter.count];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
