@@ -8,7 +8,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(modelChanged:) name:CounterModelChanged object:nil];
+    if (_counter == nil) {
+        _counter = [[Counter alloc] init];
+    }
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(modelChanged:) name:CounterModelChanged object:_counter];
 }
 
 - (void)modelChanged:(NSNotification *)notification {

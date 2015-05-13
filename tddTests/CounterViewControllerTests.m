@@ -30,6 +30,12 @@
     [super tearDown];
 }
 
+- (void)test_load_controller_from_storyboard_should_with_default_counter {
+    CounterViewController *controller = [self findController:@"counterViewController"];
+    [controller view];
+    HC_assertThat(controller.counter, HC_is(HC_notNilValue()));
+}
+
 - (void)test_increment_should_ask_counter_to_increment {
     [_sut incrementCounter:nil];
 
@@ -42,6 +48,19 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:CounterModelChanged object:_mockCounter];
     HC_assertThat(_sut.counterLabel.text, HC_is(HC_equalTo(@"2")));
 }
+
+- (void)test_model_changed_notification_from_different_model_should_not_update_counter_label {
+
+    [MKTGiven([_mockCounter count]) willReturnInteger:22];
+    Counter *differentCounter = [[Counter alloc] init];
+    differentCounter.count = 2;
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:CounterModelChanged object:differentCounter];
+
+    HC_assertThat(_sut.counterLabel.text, HC_is(HC_equalTo(@"0")));
+}
+
+
 
 - (void)test_counter_label_should_be_connected {
     HC_assertThat(_sut.counterLabel, HC_is(HC_notNilValue()));
