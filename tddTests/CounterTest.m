@@ -65,4 +65,30 @@
 
     HC_assertThatInteger(modelChangedValue, HC_is(HC_equalTo(@2)));
 }
+
+- (void)test_decrement_2_should_yield_1 {
+    _counter.count = 2;
+    [_counter decrement];
+
+    HC_assertThatInteger(_counter.count, HC_is(HC_equalTo(@1)));
+}
+
+- (void)test_decrement_3_should_yield_2 {
+    _counter.count = 3;
+    [_counter decrement];
+
+    HC_assertThatInteger(_counter.count, HC_is(HC_equalTo(@2)));
+}
+
+- (void)test_decrement_should_post_model_changed_notification {
+    [_counter decrement];
+    HC_assertThatInteger(modelChangedCounter, HC_is(HC_equalTo(@1)));
+}
+
+- (void)test_decrement_should_post_mode_changed_notification_with_new_count {
+    _counter.count = 2;
+    [_counter decrement];
+
+    HC_assertThatInteger(modelChangedValue, HC_is(HC_equalTo(@1)));
+}
 @end
