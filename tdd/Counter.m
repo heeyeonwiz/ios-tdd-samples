@@ -5,6 +5,6 @@
 
 }
 - (void)increment {
-
+    _count += 1;
 }
 @end
