@@ -3,4 +3,5 @@ use_frameworks!
 
 target 'quick-test-swiftTests' do
   pod 'Quick', '~> 0.3'
+  pod 'Nimble', '1.0.0-rc.1'
 end

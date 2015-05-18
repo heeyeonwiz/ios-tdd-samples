@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19B74B6A6C62568CB0F32DBD /* CounterViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B747004030C98278FAE669 /* CounterViewControllerSpec.swift */; };
+		3C09CE6D1B09E1BB002EF1EC /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C09CE6C1B09E1BB002EF1EC /* CounterViewController.swift */; };
 		3C8991641B09D74D00643D5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8991631B09D74D00643D5A /* AppDelegate.swift */; };
-		3C8991661B09D74D00643D5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8991651B09D74D00643D5A /* ViewController.swift */; };
 		3C8991691B09D74D00643D5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C8991671B09D74D00643D5A /* Main.storyboard */; };
 		3C89916B1B09D74D00643D5A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C89916A1B09D74D00643D5A /* Images.xcassets */; };
 		3C89916E1B09D74D00643D5A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C89916C1B09D74D00643D5A /* LaunchScreen.xib */; };
-		3C89917A1B09D74D00643D5A /* quick_test_swiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8991791B09D74D00643D5A /* quick_test_swiftTests.swift */; };
 		5BEB8904B2EF3B1B8C3E434B /* Pods_quick_test_swiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD1942508D90C398B1C0E8B0 /* Pods_quick_test_swiftTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -27,16 +27,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19B747004030C98278FAE669 /* CounterViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewControllerSpec.swift; sourceTree = "<group>"; };
+		3C09CE6C1B09E1BB002EF1EC /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		3C89915E1B09D74D00643D5A /* quick-test-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "quick-test-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C8991621B09D74D00643D5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C8991631B09D74D00643D5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C8991651B09D74D00643D5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3C8991681B09D74D00643D5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C89916A1B09D74D00643D5A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3C89916D1B09D74D00643D5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3C8991731B09D74D00643D5A /* quick-test-swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "quick-test-swiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C8991781B09D74D00643D5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C8991791B09D74D00643D5A /* quick_test_swiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quick_test_swiftTests.swift; sourceTree = "<group>"; };
 		4295046692F3E9B4F86FE221 /* Pods-quick-test-swiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quick-test-swiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-quick-test-swiftTests/Pods-quick-test-swiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E283F03097D988A61AC5F645 /* Pods-quick-test-swiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quick-test-swiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-quick-test-swiftTests/Pods-quick-test-swiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		FD1942508D90C398B1C0E8B0 /* Pods_quick_test_swiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quick_test_swiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,11 +85,11 @@
 			isa = PBXGroup;
 			children = (
 				3C8991631B09D74D00643D5A /* AppDelegate.swift */,
-				3C8991651B09D74D00643D5A /* ViewController.swift */,
 				3C8991671B09D74D00643D5A /* Main.storyboard */,
 				3C89916A1B09D74D00643D5A /* Images.xcassets */,
 				3C89916C1B09D74D00643D5A /* LaunchScreen.xib */,
 				3C8991611B09D74D00643D5A /* Supporting Files */,
+				3C09CE6C1B09E1BB002EF1EC /* CounterViewController.swift */,
 			);
 			path = "quick-test-swift";
 			sourceTree = "<group>";
@@ -105,8 +105,8 @@
 		3C8991761B09D74D00643D5A /* quick-test-swiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				3C8991791B09D74D00643D5A /* quick_test_swiftTests.swift */,
 				3C8991771B09D74D00643D5A /* Supporting Files */,
+				19B747004030C98278FAE669 /* CounterViewControllerSpec.swift */,
 			);
 			path = "quick-test-swiftTests";
 			sourceTree = "<group>";
@@ -287,7 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C8991661B09D74D00643D5A /* ViewController.swift in Sources */,
+				3C09CE6D1B09E1BB002EF1EC /* CounterViewController.swift in Sources */,
 				3C8991641B09D74D00643D5A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,7 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C89917A1B09D74D00643D5A /* quick_test_swiftTests.swift in Sources */,
+				19B74B6A6C62568CB0F32DBD /* CounterViewControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
