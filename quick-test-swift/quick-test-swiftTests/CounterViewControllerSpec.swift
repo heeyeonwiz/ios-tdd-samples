@@ -113,8 +113,7 @@ class CounterViewControllerSpec: QuickSpec {
             
             it("should update counter label") {
                 controller.counter.count = 2
-                NSNotificationCenter.defaultCenter()
-                    .postNotificationName(CounterModelChanged, object:controller.counter)
+                NSNotificationCenter.defaultCenter().postNotificationName(CounterModelChanged, object:controller.counter)
                 expect(controller.counterLabel.text).to(equal("2"))
             }
             
@@ -126,29 +125,30 @@ class CounterViewControllerSpec: QuickSpec {
                     expect(controller.counterLabel.text).to(equal("0"))
                 }
             }
-        }
-        
-        describe(".updateCounterLabel()") {
+            
             context("with zero") {
                 it("should have black text color") {
-                    controller.updateCounterLabel(0)
+                    controller.counter.count = 0                    
+                    NSNotificationCenter.defaultCenter().postNotificationName(CounterModelChanged, object:controller.counter)
                     expect(controller.counterLabel.textColor).to(equal(UIColor.blackColor()))
                 }
             }
             
-            context("with positive number") {
+            context("with positive count") {
                 it("should have green text color") {
-                    controller.updateCounterLabel(1)
+                    controller.counter.count = 1
+                    NSNotificationCenter.defaultCenter().postNotificationName(CounterModelChanged, object:controller.counter)
                     expect(controller.counterLabel.textColor).to(equal(UIColor.greenColor()))
                 }
             }
             
-            context("with negative number") {
+            context("with negative count") {
                 it("should have green text color") {
-                    controller.updateCounterLabel(-1)
+                    controller.counter.count = -1                    
+                    NSNotificationCenter.defaultCenter().postNotificationName(CounterModelChanged, object:controller.counter)
                     expect(controller.counterLabel.textColor).to(equal(UIColor.redColor()))
                 }
             }
-        }
+        }        
     }
 }
