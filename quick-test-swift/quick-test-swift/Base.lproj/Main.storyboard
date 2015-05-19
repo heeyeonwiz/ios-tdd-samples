@@ -27,7 +27,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zog-Nl-pfc">
-                                <rect key="frame" x="340" y="97" width="80" height="75"/>
+                                <rect key="frame" x="260" y="121" width="80" height="75"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="38"/>
                                 <state key="normal" title="+">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
