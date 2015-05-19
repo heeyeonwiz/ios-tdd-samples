@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		19B74B5705B8AE7F3EC0C01D /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B742B070A574CE8946DD29 /* Counter.swift */; };
 		19B74B6A6C62568CB0F32DBD /* CounterViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B747004030C98278FAE669 /* CounterViewControllerSpec.swift */; };
+		19B74F98E8B81895BBEC7AD3 /* CounterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B74E81DD7B45296CB2560D /* CounterSpec.swift */; };
 		3C09CE6D1B09E1BB002EF1EC /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C09CE6C1B09E1BB002EF1EC /* CounterViewController.swift */; };
 		3C8991641B09D74D00643D5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8991631B09D74D00643D5A /* AppDelegate.swift */; };
 		3C8991691B09D74D00643D5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C8991671B09D74D00643D5A /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		19B742B070A574CE8946DD29 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		19B747004030C98278FAE669 /* CounterViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewControllerSpec.swift; sourceTree = "<group>"; };
+		19B74E81DD7B45296CB2560D /* CounterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterSpec.swift; sourceTree = "<group>"; };
 		3C09CE6C1B09E1BB002EF1EC /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		3C89915E1B09D74D00643D5A /* quick-test-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "quick-test-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C8991621B09D74D00643D5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				3C8991771B09D74D00643D5A /* Supporting Files */,
 				19B747004030C98278FAE669 /* CounterViewControllerSpec.swift */,
+				19B74E81DD7B45296CB2560D /* CounterSpec.swift */,
 			);
 			path = "quick-test-swiftTests";
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19B74B6A6C62568CB0F32DBD /* CounterViewControllerSpec.swift in Sources */,
+				19B74F98E8B81895BBEC7AD3 /* CounterSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,11 +1,13 @@
 import Foundation
 
 public class Counter {
+    public var count:Int?
 
     public init() {
-
+        count = 0
     }
-    public func increment() {
 
+    public func increment() {
+        count!++
     }
 }
