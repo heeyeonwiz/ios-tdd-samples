@@ -13,6 +13,7 @@ public class CounterViewController: UIViewController {
         if (counter == nil) {
             counter = Counter()
         }
+        counterLabel.textColor = UIColor.blackColor()
 
         NSNotificationCenter.defaultCenter().addObserver(self, 
             selector: "modelChanged:", name: CounterModelChanged, object:counter)
@@ -32,9 +33,15 @@ public class CounterViewController: UIViewController {
         counter.decrement()
     }
     
+    public func updateCounterLabel(count:Int) {    
+        counterLabel.text = "\(count)"
+        counterLabel.textColor = (count == 0) ? UIColor.blackColor() :
+                    (count > 0) ? UIColor.greenColor() : UIColor.redColor()
+    }
+    
     func modelChanged(notification: NSNotification) {
-        if let counterObj = notification.object as? Counter {
-            counterLabel.text = "\(counterObj.count!)"
+        if let counterObj = notification.object as? Counter {            
+            updateCounterLabel(counterObj.count!)
         }
     }
     

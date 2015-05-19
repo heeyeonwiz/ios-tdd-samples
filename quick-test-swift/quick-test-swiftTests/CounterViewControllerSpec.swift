@@ -29,6 +29,10 @@ class CounterViewControllerSpec: QuickSpec {
                 it("should have zero text by default") {
                     expect(controller.counterLabel.text).to(equal("0"))
                 }
+                
+                it("should have black text color by default") {
+                    expect(controller.counterLabel.textColor).to(equal(UIColor.blackColor()))
+                }
             }
 
             describe("plusButton") {
@@ -106,6 +110,7 @@ class CounterViewControllerSpec: QuickSpec {
         }
 
         describe("model changed notification") {
+            
             it("should update counter label") {
                 controller.counter.count = 2
                 NSNotificationCenter.defaultCenter()
@@ -120,7 +125,30 @@ class CounterViewControllerSpec: QuickSpec {
                     NSNotificationCenter.defaultCenter().postNotificationName(CounterModelChanged, object:diffCounter)
                     expect(controller.counterLabel.text).to(equal("0"))
                 }
-            }            
+            }
+        }
+        
+        describe(".updateCounterLabel()") {
+            context("with zero") {
+                it("should have black text color") {
+                    controller.updateCounterLabel(0)
+                    expect(controller.counterLabel.textColor).to(equal(UIColor.blackColor()))
+                }
+            }
+            
+            context("with positive number") {
+                it("should have green text color") {
+                    controller.updateCounterLabel(1)
+                    expect(controller.counterLabel.textColor).to(equal(UIColor.greenColor()))
+                }
+            }
+            
+            context("with negative number") {
+                it("should have green text color") {
+                    controller.updateCounterLabel(-1)
+                    expect(controller.counterLabel.textColor).to(equal(UIColor.redColor()))
+                }
+            }
         }
     }
 }
