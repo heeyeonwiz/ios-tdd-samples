@@ -16,22 +16,20 @@ class CounterSpec: QuickSpec {
     
     override func spec() {
         let counter:Counter = Counter()
+        beforeEach {                
+            self.modelChangedCount = 0
+            self.modelChangedValue = 0
+            NSNotificationCenter.defaultCenter().addObserver(self,
+                                                    selector: "counterModelChanged:", 
+                                                        name: CounterModelChanged,
+                                                      object: counter)
+        }
+        
+        afterEach {
+            NSNotificationCenter.defaultCenter().removeObserver(self)
+        }
 
-        describe(".increment()") {            
-            beforeEach {                
-                self.modelChangedCount = 0
-                self.modelChangedValue = 0
-                NSNotificationCenter.defaultCenter().addObserver(self,
-                                                        selector: "counterModelChanged:", 
-                                                            name: CounterModelChanged,
-                                                          object: counter)
-            }
-            
-            afterEach {
-                NSNotificationCenter.defaultCenter().removeObserver(self)
-            }
-            
-            
+        describe(".increment()") {                                                
             it("should increment 1 to 2") {
                 counter.count = 1
                 counter.increment()
@@ -48,7 +46,7 @@ class CounterSpec: QuickSpec {
                 counter.count = 2
                 counter.increment()
                 expect(self.modelChangedCount).to(equal(1))
-            }            
+            }
             
             it("should post model changed notification with new count ") {
                 counter.count = 20
@@ -69,6 +67,18 @@ class CounterSpec: QuickSpec {
                 counter.decrement()
                 expect(counter.count).to(equal(2))
             }
+            
+            it("should post model changed notification") {
+                counter.count = 2
+                counter.decrement()
+                expect(self.modelChangedCount).to(equal(1))
+            }
+            
+            it("should post model changed notification with new count ") {
+                counter.count = 20
+                counter.decrement()
+                expect(self.modelChangedValue).to(equal(19))
+            }            
         }
     }
 }
