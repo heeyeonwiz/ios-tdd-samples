@@ -76,6 +76,16 @@ class CounterViewControllerSpec: QuickSpec {
                     .postNotificationName(CounterModelChanged, object:controller.counter)
                 expect(controller.counterLabel.text).to(equal("2"))
             }
+            
+            context("from different model") {
+                it("should not update counter label") {
+                    let diffCounter:Counter = Counter()
+                    diffCounter.count = 22
+                    NSNotificationCenter.defaultCenter().postNotificationName(CounterModelChanged, object:diffCounter)
+                    expect(controller.counterLabel.text).to(equal("0"))
+                }
+            }
+            
         }
     }
 }

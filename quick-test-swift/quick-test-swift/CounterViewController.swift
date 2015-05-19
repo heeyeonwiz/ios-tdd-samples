@@ -13,7 +13,8 @@ public class CounterViewController: UIViewController {
             counter = Counter()
         }
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "modelChanged:", name: CounterModelChanged, object:nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, 
+            selector: "modelChanged:", name: CounterModelChanged, object:counter)
     }
 
     public override func didReceiveMemoryWarning() {
