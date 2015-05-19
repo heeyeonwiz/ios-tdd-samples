@@ -4,6 +4,7 @@ public class CounterViewController: UIViewController {
 
     @IBOutlet public weak var counterLabel: UILabel!
     @IBOutlet public weak var plusButton: UIButton!
+    @IBOutlet public weak var minusButton: UIButton!
 
     public var counter: Counter!
 
@@ -25,6 +26,10 @@ public class CounterViewController: UIViewController {
 
     @IBAction public func incrementCounter(sender: AnyObject?) {
         counter.increment()
+    }
+    
+    @IBAction public func decrementCounter(sender: AnyObject?) {
+        counter.decrement()
     }
     
     func modelChanged(notification: NSNotification) {

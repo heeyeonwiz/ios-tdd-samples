@@ -42,6 +42,18 @@ class CounterViewControllerSpec: QuickSpec {
                     ).to(contain("incrementCounter:"))
                 }
             }
+            
+            describe("minusButton") {
+                it("should be connected") {
+                    expect(controller.minusButton).toNot(beNil())
+                }
+
+                it("should observe action") {
+                    expect(controller.minusButton.actionsForTarget(controller,
+                            forControlEvent: UIControlEvents.TouchUpInside)
+                    ).to(contain("decrementCounter:"))
+                }
+            }
         }
 
         describe("incrementCounter") {
@@ -68,6 +80,30 @@ class CounterViewControllerSpec: QuickSpec {
                 expect((controller.counter as! MockCounter).invokeCount).to(equal(1))
             }
         }
+        
+        describe("decrementCounter") {
+            class MockCounter: Counter {
+                var invokeCount:Int?
+                override init() {
+                    invokeCount = 0
+                    super.init()
+                }
+                override func decrement() {
+                    invokeCount!++
+                }
+            }
+
+            beforeEach {
+                let mockCounter:MockCounter = MockCounter()
+                controller.counter = mockCounter
+            }
+
+            it("should ask counter to decremet") {
+                controller.decrementCounter(nil)
+
+                expect((controller.counter as! MockCounter).invokeCount).to(equal(1))
+            }
+        }
 
         describe("model changed notification") {
             it("should update counter label") {
@@ -84,8 +120,7 @@ class CounterViewControllerSpec: QuickSpec {
                     NSNotificationCenter.defaultCenter().postNotificationName(CounterModelChanged, object:diffCounter)
                     expect(controller.counterLabel.text).to(equal("0"))
                 }
-            }
-            
+            }            
         }
     }
 }

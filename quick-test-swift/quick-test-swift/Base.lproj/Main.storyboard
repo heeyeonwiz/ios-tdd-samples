@@ -36,6 +36,16 @@
                                     <action selector="incrementCounter:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ivs-bX-I0X"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fJ-N4-HIq">
+                                <rect key="frame" x="119" y="121" width="80" height="75"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="38"/>
+                                <state key="normal" title="-">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="decrementCounter:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="abu-KZ-QZu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -45,6 +55,7 @@
                     </view>
                     <connections>
                         <outlet property="counterLabel" destination="sZg-uN-a6x" id="Zd8-4T-dTh"/>
+                        <outlet property="minusButton" destination="2fJ-N4-HIq" id="lSW-md-2ed"/>
                         <outlet property="plusButton" destination="Zog-Nl-pfc" id="p9k-tr-j7N"/>
                     </connections>
                 </viewController>
