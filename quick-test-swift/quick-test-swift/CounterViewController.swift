@@ -20,7 +20,8 @@ public class CounterViewController: UIViewController {
     }
     
 
-    @IBAction public func incrementCounter(sender: AnyObject) {
+    @IBAction public func incrementCounter(sender: AnyObject?) {
+        counter.increment()
     }
     /*
     // MARK: - Navigation

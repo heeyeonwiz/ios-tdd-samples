@@ -43,5 +43,30 @@ class CounterViewControllerSpec: QuickSpec {
                 }
             }
         }
+
+        describe("incrementCounter") {
+
+            class MockCounter: Counter {
+                var invokeCount:Int?
+                override init() {
+                    invokeCount = 0
+                    super.init()
+                }
+                override func increment() {
+                    invokeCount!++
+                }
+            }
+
+            beforeEach {
+                let mockCounter:MockCounter = MockCounter()
+                controller.counter = mockCounter
+            }
+
+            it("should ask counter to incremet") {
+                controller.incrementCounter(nil)
+
+                expect((controller.counter as! MockCounter).invokeCount).to(equal(1))
+            }
+        }
     }
 }
