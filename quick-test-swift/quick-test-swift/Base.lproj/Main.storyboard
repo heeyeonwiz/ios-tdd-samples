@@ -7,7 +7,7 @@
         <!--Counter View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="CounterViewController" customModule="quick_test_swift" customModuleProvider="target" sceneMemberID="viewController" storyboardIdentifier="counterViewController">
+                <viewController storyboardIdentifier="counterViewController" id="vXZ-lx-hvc" customClass="CounterViewController" customModule="quick_test_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -26,6 +26,16 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zog-Nl-pfc">
+                                <rect key="frame" x="340" y="97" width="80" height="75"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="38"/>
+                                <state key="normal" title="+">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="incrementCounter:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ivs-bX-I0X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -35,6 +45,7 @@
                     </view>
                     <connections>
                         <outlet property="counterLabel" destination="sZg-uN-a6x" id="Zd8-4T-dTh"/>
+                        <outlet property="plusButton" destination="Zog-Nl-pfc" id="p9k-tr-j7N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

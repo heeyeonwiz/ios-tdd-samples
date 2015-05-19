@@ -3,6 +3,7 @@ import UIKit
 public class CounterViewController: UIViewController {
 
     @IBOutlet public weak var counterLabel: UILabel!
+    @IBOutlet public weak var plusButton: UIButton!
     public override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -15,6 +16,8 @@ public class CounterViewController: UIViewController {
     }
     
 
+    @IBAction public func incrementCounter(sender: AnyObject) {
+    }
     /*
     // MARK: - Navigation
 

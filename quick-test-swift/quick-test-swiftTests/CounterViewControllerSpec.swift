@@ -24,6 +24,18 @@ class CounterViewControllerSpec: QuickSpec {
                     expect(controller.counterLabel.text).to(equal("0"))
                 }
             }
+
+            describe("plusButton") {
+                it("should be connected") {
+                    expect(controller.plusButton).toNot(beNil())
+                }
+
+                it("should observe action") {
+                    expect(controller.plusButton.actionsForTarget(controller,
+                            forControlEvent: UIControlEvents.TouchUpInside)
+                    ).to(contain("incrementCounter:"))
+                }
+            }
         }
     }
 }
