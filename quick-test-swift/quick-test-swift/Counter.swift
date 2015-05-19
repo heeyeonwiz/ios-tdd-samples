@@ -1,5 +1,7 @@
 import Foundation
 
+public let CounterModelChanged = "CounterModelChanged"
+
 public class Counter {
     public var count:Int?
 
@@ -14,5 +16,4 @@ public class Counter {
     public func decrement() {
         count!--
     }
-
 }

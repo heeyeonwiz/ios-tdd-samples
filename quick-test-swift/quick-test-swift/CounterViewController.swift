@@ -12,6 +12,8 @@ public class CounterViewController: UIViewController {
         if (counter == nil) {
             counter = Counter()
         }
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "modelChanged:", name: CounterModelChanged, object:nil)
     }
 
     public override func didReceiveMemoryWarning() {
@@ -23,6 +25,13 @@ public class CounterViewController: UIViewController {
     @IBAction public func incrementCounter(sender: AnyObject?) {
         counter.increment()
     }
+    
+    func modelChanged(notification: NSNotification) {
+        if let counterObj = notification.object as? Counter {
+            counterLabel.text = "\(counterObj.count!)"
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

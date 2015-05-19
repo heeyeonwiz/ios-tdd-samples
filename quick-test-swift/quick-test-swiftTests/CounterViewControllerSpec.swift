@@ -68,5 +68,14 @@ class CounterViewControllerSpec: QuickSpec {
                 expect((controller.counter as! MockCounter).invokeCount).to(equal(1))
             }
         }
+
+        describe("model changed notification") {
+            it("should update counter label") {
+                controller.counter.count = 2
+                NSNotificationCenter.defaultCenter()
+                    .postNotificationName(CounterModelChanged, object:controller.counter)
+                expect(controller.counterLabel.text).to(equal("2"))
+            }
+        }
     }
 }
