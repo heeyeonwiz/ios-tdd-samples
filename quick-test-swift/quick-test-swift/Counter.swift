@@ -11,6 +11,7 @@ public class Counter {
 
     public func increment() {
         count!++
+        NSNotificationCenter.defaultCenter().postNotificationName(CounterModelChanged, object:self)
     }
 
     public func decrement() {
