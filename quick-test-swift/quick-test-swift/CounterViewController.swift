@@ -4,10 +4,14 @@ public class CounterViewController: UIViewController {
 
     @IBOutlet public weak var counterLabel: UILabel!
     @IBOutlet public weak var plusButton: UIButton!
+
+    public var counter: Counter!
+
     public override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        if (counter == nil) {
+            counter = Counter()
+        }
     }
 
     public override func didReceiveMemoryWarning() {

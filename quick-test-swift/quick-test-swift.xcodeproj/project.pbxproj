@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19B74B5705B8AE7F3EC0C01D /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B742B070A574CE8946DD29 /* Counter.swift */; };
 		19B74B6A6C62568CB0F32DBD /* CounterViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B747004030C98278FAE669 /* CounterViewControllerSpec.swift */; };
 		3C09CE6D1B09E1BB002EF1EC /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C09CE6C1B09E1BB002EF1EC /* CounterViewController.swift */; };
 		3C8991641B09D74D00643D5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8991631B09D74D00643D5A /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19B742B070A574CE8946DD29 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		19B747004030C98278FAE669 /* CounterViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewControllerSpec.swift; sourceTree = "<group>"; };
 		3C09CE6C1B09E1BB002EF1EC /* CounterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		3C89915E1B09D74D00643D5A /* quick-test-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "quick-test-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,7 @@
 				3C89916C1B09D74D00643D5A /* LaunchScreen.xib */,
 				3C8991611B09D74D00643D5A /* Supporting Files */,
 				3C09CE6C1B09E1BB002EF1EC /* CounterViewController.swift */,
+				19B742B070A574CE8946DD29 /* Counter.swift */,
 			);
 			path = "quick-test-swift";
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			files = (
 				3C09CE6D1B09E1BB002EF1EC /* CounterViewController.swift in Sources */,
 				3C8991641B09D74D00643D5A /* AppDelegate.swift in Sources */,
+				19B74B5705B8AE7F3EC0C01D /* Counter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

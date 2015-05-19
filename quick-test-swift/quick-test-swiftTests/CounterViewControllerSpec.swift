@@ -15,6 +15,12 @@ class CounterViewControllerSpec: QuickSpec {
         }
 
         describe(".viewDidiLoad()") {
+            describe("Counter") {
+                it("") {
+                    expect(controller.counter).toNot(beNil())
+                }
+            }
+
             describe("counterLabel") {
                 it("should be connected") {
                    expect(controller.counterLabel).toNot(beNil())
