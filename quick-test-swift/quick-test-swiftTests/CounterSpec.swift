@@ -19,7 +19,20 @@ class CounterSpec: QuickSpec {
                 counter.increment()
                 expect(counter.count).to(equal(3))
             }
+        }
 
+        describe(".decrement()") {
+            it("should increment 2 to 1") {
+                counter.count = 2
+                counter.decrement()
+                expect(counter.count).to(equal(1))
+            }
+
+            it("should increment 3 to 2") {
+                counter.count = 3
+                counter.decrement()
+                expect(counter.count).to(equal(2))
+            }
         }
     }
 }

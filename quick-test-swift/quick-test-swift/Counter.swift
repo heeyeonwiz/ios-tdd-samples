@@ -10,4 +10,9 @@ public class Counter {
     public func increment() {
         count!++
     }
+
+    public func decrement() {
+        count!--
+    }
+
 }
