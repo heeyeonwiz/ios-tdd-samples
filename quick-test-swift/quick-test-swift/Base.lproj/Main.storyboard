@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Counter View Controller-->
@@ -26,18 +27,11 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zog-Nl-pfc">
-                                <rect key="frame" x="260" y="121" width="80" height="75"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="38"/>
-                                <state key="normal" title="+">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="incrementCounter:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ivs-bX-I0X"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fJ-N4-HIq">
-                                <rect key="frame" x="119" y="121" width="80" height="75"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fJ-N4-HIq">
+                                <rect key="frame" x="16" y="121" width="280" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="AoL-0A-DJO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="38"/>
                                 <state key="normal" title="-">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -46,11 +40,28 @@
                                     <action selector="decrementCounter:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="abu-KZ-QZu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zog-Nl-pfc">
+                                <rect key="frame" x="304" y="121" width="280" height="75"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="38"/>
+                                <state key="normal" title="+">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="incrementCounter:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ivs-bX-I0X"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="sZg-uN-a6x" secondAttribute="centerX" id="0pe-6d-ELP"/>
+                            <constraint firstItem="2fJ-N4-HIq" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="7ZP-Ox-YLi"/>
+                            <constraint firstItem="Zog-Nl-pfc" firstAttribute="width" secondItem="2fJ-N4-HIq" secondAttribute="width" id="9n2-hq-Lur"/>
+                            <constraint firstItem="2fJ-N4-HIq" firstAttribute="height" secondItem="Zog-Nl-pfc" secondAttribute="height" id="F8Z-aM-moe"/>
+                            <constraint firstItem="2fJ-N4-HIq" firstAttribute="top" secondItem="sZg-uN-a6x" secondAttribute="bottom" constant="32" id="IAf-u2-QV2"/>
                             <constraint firstItem="sZg-uN-a6x" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="WRE-p3-ddF"/>
+                            <constraint firstItem="2fJ-N4-HIq" firstAttribute="top" secondItem="Zog-Nl-pfc" secondAttribute="top" id="eJC-ED-hiN"/>
+                            <constraint firstItem="Zog-Nl-pfc" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="eqM-9k-9q4"/>
+                            <constraint firstItem="Zog-Nl-pfc" firstAttribute="leading" secondItem="2fJ-N4-HIq" secondAttribute="trailing" constant="8" id="i6r-Tv-hme"/>
                         </constraints>
                     </view>
                     <connections>
