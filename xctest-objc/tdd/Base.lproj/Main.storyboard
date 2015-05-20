@@ -39,7 +39,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPa-bu-xqv">
                                 <rect key="frame" x="16" y="142" width="280" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="qDP-vc-shu"/>
+                                    <constraint firstAttribute="height" constant="100" id="YJ2-9c-fKC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
                                 <state key="normal" title="-">
@@ -52,16 +52,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tPa-bu-xqv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="C86-3Y-rdP"/>
-                            <constraint firstItem="ETD-rI-qEi" firstAttribute="centerY" secondItem="tPa-bu-xqv" secondAttribute="centerY" id="LvL-PY-oBy"/>
-                            <constraint firstItem="ETD-rI-qEi" firstAttribute="leading" secondItem="NDp-HR-Wad" secondAttribute="trailing" constant="-67" id="TMG-s4-fh3"/>
-                            <constraint firstItem="ETD-rI-qEi" firstAttribute="leading" secondItem="tPa-bu-xqv" secondAttribute="trailing" constant="8" id="f18-hx-Pec"/>
-                            <constraint firstItem="ETD-rI-qEi" firstAttribute="height" secondItem="tPa-bu-xqv" secondAttribute="height" id="hav-ym-l07"/>
+                            <constraint firstItem="tPa-bu-xqv" firstAttribute="top" secondItem="NDp-HR-Wad" secondAttribute="bottom" constant="8" id="MIA-t8-eI2"/>
+                            <constraint firstItem="ETD-rI-qEi" firstAttribute="leading" secondItem="tPa-bu-xqv" secondAttribute="trailing" constant="8" id="TDt-eF-syC"/>
+                            <constraint firstItem="tPa-bu-xqv" firstAttribute="top" secondItem="ETD-rI-qEi" secondAttribute="top" id="YQK-u2-xBG"/>
+                            <constraint firstItem="tPa-bu-xqv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="hM5-kZ-Thy"/>
                             <constraint firstAttribute="centerX" secondItem="NDp-HR-Wad" secondAttribute="centerX" constant="-0.5" id="jMc-3V-tlM"/>
-                            <constraint firstItem="tPa-bu-xqv" firstAttribute="top" secondItem="NDp-HR-Wad" secondAttribute="bottom" constant="8" id="mLu-7M-UwQ"/>
+                            <constraint firstItem="ETD-rI-qEi" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="oIK-gg-Kj5"/>
                             <constraint firstItem="NDp-HR-Wad" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="42" id="x4d-tt-m1U"/>
-                            <constraint firstItem="ETD-rI-qEi" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="yDA-dU-whH"/>
-                            <constraint firstItem="NDp-HR-Wad" firstAttribute="leading" secondItem="tPa-bu-xqv" secondAttribute="trailing" constant="-66" id="zKK-fv-ngo"/>
+                            <constraint firstItem="tPa-bu-xqv" firstAttribute="width" secondItem="ETD-rI-qEi" secondAttribute="width" id="yPG-j4-rEr"/>
+                            <constraint firstItem="tPa-bu-xqv" firstAttribute="height" secondItem="ETD-rI-qEi" secondAttribute="height" id="z3W-jw-Gij"/>
                         </constraints>
                     </view>
                     <connections>
