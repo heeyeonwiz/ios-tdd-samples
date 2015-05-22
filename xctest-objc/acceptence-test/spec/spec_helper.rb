@@ -17,12 +17,12 @@ RSpec.configure do |config|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
 
-  config.before(:each) do
+  config.before(:all) do
     @driver = Appium::Driver.new(caps)
     @driver.start_driver
   end
 
-  config.after(:each) do
+  config.after(:all) do
     @driver.driver_quit
   end
 
