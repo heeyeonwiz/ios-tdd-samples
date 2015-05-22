@@ -1,0 +1,10 @@
+[caps]
+platformName = "iOS"
+platformVersion = "8.3"
+deviceName = "iPhone 5s"
+app = "../build/Products/Debug-iphonesimulator/tdd.app"
+name = "tdd"
+
+[appium_lib]
+debug = true
+export_session = true
