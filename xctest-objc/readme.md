@@ -89,6 +89,8 @@ Tools
 * XCTest
 * [OCHarmcrest](https://github.com/hamcrest/OCHamcrest) for assertion
 * [OCMockito](https://github.com/jonreid/OCMockito) for mock
+* [appium](http://appium.io/) for UIAutomation Test Driver
+* [rspec](http://rspec.info/) for UIAutomation Test Script
 
 How to use it
 ===
